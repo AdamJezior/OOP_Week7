@@ -4,7 +4,7 @@
 
 ### Task 1 - /40
 **My mark:**
-31
+29
 **Why I awarded this mark:**
 Missed the public definer in the constructor, scanner function not implemented, member object is initiated, displayDetails works, getter methods work
 
@@ -25,7 +25,7 @@ an attempt is made but the function was not finished and does not work properly,
 not attempted
 
 **Total self-assessed grade:** /100
-58
+56
 ## 2. Corrections and Improvements
 
 Describe two or three important problems you identified
