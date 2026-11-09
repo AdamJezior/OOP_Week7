@@ -10,10 +10,15 @@ public class gym {
     private String name;
     private final List<gym> gyms = new ArrayList<>();
 
-    gym(String memberId, int age, String name){
-        this.memberId = memberId;
-        this.age = age;
-        this.name=name;
+    gym(){
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter Name");
+        this.name=input.nextLine();
+        System.out.println("Enter Member ID");
+        this.memberId = input.nextLine();
+        System.out.println("Enter Age");
+        this.age = input.nextInt();
+
         gyms.add(this);
     }
 
@@ -34,36 +39,14 @@ public class gym {
         System.out.println("name: "+name);
         System.out.println("age: "+age);
     }
-    public static void addGym(){
-        Scanner input= new Scanner(System.in);
-        System.out.println("Enter Member ID");
-        String Id=input.nextLine();
-        System.out.println("Enter Age");
-        int Age=input.nextInt();
-        System.out.println("Enter Name");
-        String Name=input.nextLine();
-        new gym(Id,Age,Name);
-    }
 
-    public boolean searchByID(String id){
-        for(gym gym:gyms){
-            if (gym.getId() == id) {
-                gym.displayDetails();
-                return true;
-            }
-        }
-        System.out.println("Invalid ID");
-        return false;
-    }
-    public void listMembers(){
-        if(gyms.size()==0){
-            System.out.println("No members found");
-            return;
-        }
-        else {
-            for (gym gym : gyms) {
-                System.out.println(gym.name);
-            }
-        }
+    @Override
+    public String toString() {
+        return "member{" +
+                "memberId='" + memberId + '\'' +
+                ", age=" + age +
+                ", name='" + name + '\'' +
+                ", gyms=" + gyms +
+                '}';
     }
 }
