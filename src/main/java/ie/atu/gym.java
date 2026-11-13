@@ -8,9 +8,15 @@ public class gym {
     private String memberId;
     private int age;
     private String name;
-    private final List<gym> gyms = new ArrayList<>();
+    private final List<gym> members = new ArrayList<>();
 
-    gym(){
+    public gym(String memberId, int age, String name) {
+        this.memberId = memberId;
+        this.age = age;
+        this.name = name;
+    }
+
+    public void addGym(){
         Scanner input= new Scanner(System.in);
         System.out.println("Enter Name");
         this.name=input.nextLine();
@@ -19,12 +25,32 @@ public class gym {
         System.out.println("Enter Age");
         this.age = input.nextInt();
 
-        gyms.add(this);
+        members.add(this);
     }
 
-    public String getId(){
-        System.out.println(memberId);
-        return memberId;
+    public void displayGym(){
+        if(members.isEmpty()){
+            System.out.println("No members found");
+        }
+        else {
+            for(gym m:members){
+                System.out.println("Details: "+m);
+            }
+        }
+    }
+
+    public void getId(){
+
+        Scanner id= new Scanner(System.in);
+        System.out.println("Enter ID:\n");
+        String ids = id.nextLine();
+        if(members.contains(ids)){
+            System.out.println("Member found\n");
+            members.get();
+        }
+        else{
+            System.out.println("Member not found\n");
+        }
     }
     public int getAge(){
         System.out.println(age);
@@ -46,7 +72,6 @@ public class gym {
                 "memberId='" + memberId + '\'' +
                 ", age=" + age +
                 ", name='" + name + '\'' +
-                ", gyms=" + gyms +
                 '}';
     }
 }
