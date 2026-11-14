@@ -8,7 +8,7 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        gym members.=new gym("0",0,"test");
+        gym members =new gym("0",0,"test");
 
         for(int x=0; x<2;x++) {
             System.out.println("1.Add Member\t2.Display All Members\t3.Search by ID\n4.Remove Member\t5. Exit");
@@ -25,7 +25,7 @@ public class Main {
                 members.getId();
             }
             else if(i==4){
-
+                members.removeMember();
             }
             else if(i==5){
                 x=5;

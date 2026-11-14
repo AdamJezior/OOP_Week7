@@ -32,19 +32,21 @@ Describe two or three important problems you identified
 in your original code. Explain what you changed and
 why it works now.
 
-
+i added the remove members function and tested it. 
+i fixed the find member by id function by changing it to use the getter function for id and comparing it to the user input.
+i made the main menu usable by changing it to have one user input rather than having seperate inputs for each section. 
 
 ## 3. Reflection
 
 **What did you understand during the examination
 but struggle to implement?**
-I had forgotten that the scanner function required a library, I was unable to get a Switch statement working, mostly the scanner function for the id search
+I had forgotten that the scanner function required a library, I was unable to get a Switch statement working, mostly the scanner function for the id search.
 **What was the most important thing you learned
 from correcting your code?**
-
+I learned that I overcomplicated some simple functions.
 **What would you do differently in your next
 coding test?**
-
+I would do more research into the built in library functions 
 ---
 
 ## Review lab assessment and mark recovery

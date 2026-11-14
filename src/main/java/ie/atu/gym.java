@@ -2,6 +2,7 @@ package ie.atu;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class gym {
@@ -24,7 +25,10 @@ public class gym {
         this.memberId = input.nextLine();
         System.out.println("Enter Age");
         this.age = input.nextInt();
-
+        if(this.age<=0) {
+            System.out.println("member age cannot be less than 1");
+            return;
+        }
         members.add(this);
     }
 
@@ -44,22 +48,38 @@ public class gym {
         Scanner id= new Scanner(System.in);
         System.out.println("Enter ID:\n");
         String ids = id.nextLine();
-        if(members.contains(ids)){
-            System.out.println("Member found\n");
-            members.get();
+        if(Objects.equals(getMemberId(), ids)) {
+                    System.out.println("Member found\n");
+                    displayDetails();
         }
         else{
             System.out.println("Member not found\n");
         }
     }
+    public void removeMember(){
+        Scanner id= new Scanner(System.in);
+        System.out.println("Enter ID:\n");
+        String ids = id.nextLine();
+        if(Objects.equals(getMemberId(), ids)) {
+            members.remove(ids);
+        }
+        else{
+            System.out.println("Member not found\n");
+        }
+    }
+
     public int getAge(){
-        System.out.println(age);
         return age;
     }
+
     public String getName(){
-        System.out.println(name);
         return name;
     }
+
+    public String getMemberId() {
+        return memberId;
+    }
+
     public void displayDetails(){
         System.out.println("member Id: "+memberId);
         System.out.println("name: "+name);
